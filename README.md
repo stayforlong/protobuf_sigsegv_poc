@@ -2,8 +2,19 @@
 
 Proof of concept for https://github.com/protocolbuffers/protobuf/issues/9446
 
-# RUN
+## Run
 
-`docker-compose up -d && docker-compose logs | grep SIGSEGV && docker-compose down`
+`make run`
 
+## Show SIGSEGV log
 
+`make log`
+
+## Clean
+
+`make clean`
+
+# Requirements
+
+- docker
+- docker-compose
