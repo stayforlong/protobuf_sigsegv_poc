@@ -21,6 +21,7 @@ services:
     volumes:
       - ./docker/conf/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./app:/app
+    privileged: true
 
   ab:
     build:
