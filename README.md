@@ -12,7 +12,7 @@ Proof of concept for https://github.com/protocolbuffers/protobuf/issues/9446
 
 ## Force SIGSEGV
 
-`make log`
+`make flood`
 
 ## Clean
 
