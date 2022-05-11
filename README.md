@@ -10,6 +10,10 @@ Proof of concept for https://github.com/protocolbuffers/protobuf/issues/9446
 
 `make log`
 
+## Force SIGSEGV
+
+`make log`
+
 ## Clean
 
 `make clean`

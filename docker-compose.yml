@@ -9,9 +9,9 @@ services:
       - ./app:/app
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost/index.php" ]
-      interval: 3s
-      timeout: 1s
-      retries: 3
+      interval: 4s
+      timeout: 2s
+      retries: 4
 
   php-fpm:
     init: true
@@ -27,7 +27,8 @@ services:
     build:
       context: docker/
       dockerfile: ab.Dockerfile
-    command: -n 500 -c 2 http://nginx/index.php
+    command: [ "-n", "1000", "-c", "3", "http://nginx/index.php" ]
+    restart: on-failure
     depends_on:
       nginx:
         condition: service_healthy
